@@ -38,5 +38,22 @@ setTimeout(() => {
 const setiap = scores.every((score) => score >= 70);
 console.log(setiap);
 
+// penggunaan method reduce 
+const nilaiTerendah = scores.reduce((scores, score) => {
+    if (scores < score) {
+        return scores;
+    }
+    return score;
+});
+
+const nilaiTertinggi = scores.reduce((scores, score) => {
+    if (scores > score) {
+        return scores;
+    }
+    return score;
+});
+console.log(nilaiTerendah);
+console.log(nilaiTertinggi);
+
 
 
