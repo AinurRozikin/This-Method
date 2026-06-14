@@ -79,10 +79,42 @@ console.log(sisaPeserta); // Output yang diharapkan: [70, 60, 50]
 
 
 
-// ini adalah destructuring operator
+// ini adalah destructuring array
 let arr = ['merah','jingga','kuning','hijau','biru','nila','ungu'];
 let [satu,dua,tiga,...sisaWarna] = arr;
 console.log(sisaWarna);
+
+
+
+// ini adalah destructuring object
+const buku = {
+  judul: "Laskar Pelangi",
+  penulis: "Andrea Hirata",
+  tahunTerbit: 2005,
+  penerbit: "Bentang Pustaka"
+};
+
+// Tulis kode destructuring Anda di sini:
+const { judul,penulis,...informasiTambahan } = buku;
+console.log(judul);             // Output diharapkan: "Laskar Pelangi"
+console.log(informasiTambahan); // Output diharapkan: { tahunTerbit: 2005, penerbit: "Bentang Pustaka" }
+
+
+
+
+
+const produk = {
+  id: "P01",
+  namaProduk: "Kemeja Flanel",
+  harga: 150000
+};
+
+// Tulis kode destructuring Anda di sini (ubah 'harga' menjadi 'hargaDiskon'):
+const { harga : hargaDiskon } = produk;
+
+console.log(hargaDiskon); // Output diharapkan: 150000
+// Catatan: variabel 'harga' tidak akan bisa dipanggil karena sudah diubah namanya.
+
 
 
 
