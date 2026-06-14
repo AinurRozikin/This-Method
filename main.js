@@ -1,5 +1,7 @@
 /*Keyword This digunakan untuk memanggil properti dari sebuah objek
-sedangkan method adalah function yang dimiliki oleh sebuah objek  */
+sedangkan method adalah function yang dimiliki oleh sebuah objek.
+arrow function memiliki perilaku berbeda dalam menggunakan this karena
+dia memanggil langsung ke dalam objek window*/
 
 const penggunaanMethodDanThis = {
     merek : 'toyota',
@@ -54,6 +56,33 @@ const nilaiTertinggi = scores.reduce((scores, score) => {
 });
 console.log(nilaiTerendah);
 console.log(nilaiTertinggi);
+
+
+// penggunaan spread(menyebarkan) / rest  (mengumpulkan) operator
+// dibawah ini adalah spread operator
+let sayur = ["Bayam", "Wortel"];
+let buah = ["Apel", "Mangga"];
+
+// Tulis kode Anda di sini:
+let semuaBelanjaan = [...sayur,...buah] ; 
+
+console.log(semuaBelanjaan); // Output yang diharapkan: ["Bayam", "Wortel", "Apel", "Mangga"]
+
+
+// dibawah ini adalah rest operator
+let nilai =[80,70,60,50];
+let [juara1,...sisaPeserta] = nilai;
+
+console.log(sisaPeserta); // Output yang diharapkan: [70, 60, 50]
+
+
+
+
+
+// ini adalah destructuring operator
+let arr = ['merah','jingga','kuning','hijau','biru','nila','ungu'];
+let [satu,dua,tiga,...sisaWarna] = arr;
+console.log(sisaWarna);
 
 
 
